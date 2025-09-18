@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
 :root {
-    --color-primary: #83fd4b;
-    --color-secondary: #2243e6;
-    --color-tertiary: #3bf01f;
-    --color-button: #65ee33;
-    --color-button-hover: #0e0401;
-    --color-text: #efe9e9;
+    --color-primary: #FC629D ;
+    --color-secondary: #FC62FA;
+    --color-tertiary: #F20AD1;
+    --color-button: #B062FC;
+    --color-button-hover: #9862FC;
+    --color-text: #E2C3FF;
     --color-white: #FFFFFF;
+    --color-black: black;
 }
 
 /* Estilos gerais */
@@ -15,104 +18,138 @@
     box-sizing: border-box;
 }
 
+.Img-amigo-secreto {
+    border-radius: 130px 130px 130px 130px;
+    
+}
+
 body {
     height: 100vh;
     background-color: var(--color-primary);
+    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
-
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40%;
+    margin-top: 20PX;
+}
 .main-content {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 90%;
     width: 90%;
 }
 
 /* Banner */
 .header-banner {
-    flex: 100%;
+    flex: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    padding: 0 20px ;
 }
 
 /* Seção de entrada */
 .input-section {
-    flex: 90%;
-    background-color: var(--color-secondary);
-    border: 10px solid #ffffff;
+    flex: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
+    gap: 20px;
 }
 
 /* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-black) ;
+    color: var(--color-primary);
+    font-size: 90px;
+    font-family: "Dancing Script";
+    
 }
 
 .section-title {
-    font-family: "Inter", serif;
-    font-size: 60px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 20px;
+    font-family: "Dancing Script";
+    font-size: 80px;
+    font-weight: 700px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--color-black) ;
+    margin: 50px 50px;
     text-align: center;
 }
 
 /* Contêineres de entrada e botão */
 .input-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: right;
     width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
+    max-width: 50px;
+    margin-right: 0 30%;
+    gap:  20%;
 }
 
 .input-name {
     text-align: center;
     align-items: center;
-    background-color: #05DF05;
-    width: 1500px;
+    background-color: var(--color-secondary) ;
+    width: 180px;
     padding: 10px;
-    border: 4px solid #ffffff;
-    border-radius: 0 0 0 25px;
-    font-size: 20px;
+    border: 8px solid var(--color-tertiary);
+    border-radius: 10px 10px 10px 10px;
+    font-size: 15px;
+    margin: 0 40px;
+
 }
 
 .button-container {
-    width: 200px;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 100%;
+    max-width: 50px;
+    margin-right: 0 30%;
+    gap: 80%;
 }
 
 /* Estilos de entrada de texto */
 .input-title {
     flex: 1;
     padding: 10px 15px;
-    font-size: 20px;
-    border: 2px solid #6b0000;
-    border-right: none;
-    border-radius: 25px 25px 0 25px;
-    font-family: "Merriweather", serif;
+    font-size: 20px;  
+    border: 8px solid var(--color-tertiary);
+    border-radius: 10px 10px 10px 10px;
+    font-family: "Dancing Script";
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+input::placeholder {
+    font-size: 20px;
+    font-family: "Dancing Script";
+    color: var(--color-white);
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
 }
 
 /* Estilos de botão */
 button {
-    padding: 15px 111px;
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    border: 4px solid #fafff9;
-    border-radius: 200px;
+    padding: 15px 15px;
+    font-family: "Dancing Script";
+    font-size: 20px;
+    border: 8px solid var(--color-tertiary);
+    border-radius: 10px 10px 10px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     cursor: pointer;
 }
@@ -120,43 +157,49 @@ button {
 .button-add {
     text-align: left;
     width: 500px;
-    background-color: var(--color-tertiary);
+    background-color: var(--color-secondary);
     color: var(--color-text);
-    border-radius: 0 0 25px 0;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .button-add:hover {
-    background-color: #dbdbdb;
+    background-color: var(--color-button-hover);
 }
-
+.lista_de_amigos {
+    min-width: 200px;
+    text-align: left;
+}
 /* Listas */
 ul {
+    flex-direction: column;
+    justify-content: left;
     list-style-type: none;
     color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-size: 25px;
+    font-family: "Dancing Script";
+    font-size: 40px;
     margin: 20px 20px;
 }
 
 li {
-    font-size: 10px;
-    text-align: right;
-    color: #fefefe;
-    font-size: 20px;
-    width: 900px;
+    text-align: center;
+    color: var(--color-text);
 }
 
-p {
-    text-align: right;
-    color: #FFFFFF;
-    width: 900px ;
+.texto {
+    width: 200px;
+    border-radius: 12px  12px  12px  12px;
+    font-family: "Dancing Script";
+    background-color: #530d44;
+    text-align: center;
+    color: white;
 
 }
+
 
 .result-list {
     margin-top: 15px;
     color: #05DF05;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
@@ -165,17 +208,38 @@ p {
 .button-draw {
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 10px 40px;
+    width: 200px;
+    height: 80px;
+    padding: 15px 15px;
     color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
+    background-color: rgb(215, 74, 243);
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+.button-draw-reset {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 80px;
+    padding: 15px 15px;
+    color: var(--color-white);
+    background-color: var(--color-secondary);
+    font-size: 20px;
+    margin-top: -10px;
+
 }
 
 .button-draw img {
-    margin-right: 40px;
+    margin-right: 15px;
 }
 
+.button-draw-reset img {
+    margin-right: 15px;
+}
 .button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+.button-draw-reset:hover {
     background-color: var(--color-button-hover);
 }
